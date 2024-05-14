@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CarSelectorComponent } from './components/car-selector.component';
 import { HttpClientModule} from '@angular/common/http';
-//import { bootstrapApplication } from '@angular/platform-browser-dynamic'; 
 import { NgbDropdownModule } from '@ng-bootstrap/ng-bootstrap';
 
 

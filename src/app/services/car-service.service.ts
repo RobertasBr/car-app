@@ -28,16 +28,16 @@ export class CarServiceService {
       'x-rapidapi-key': this.apiKey,
       'x-rapidapi-host': 'car-api2.p.rapidapi.com',
     };
-
-    const params = new HttpParams().set('make', make).set('year', '2020');
+  
+    const params = new HttpParams()
+      .set('make', make)
+      .set('year', '2020'); 
   
     const url = `${this.baseUrl}/api/models?${params.toString()}`;
-  
-    return this.http.get<any>(url, { headers })
-      .pipe(
-        tap(data => console.log('Car models data/error:', data)),
-        catchError(this.handleError)
-      );
+    return this.http.get<any>(url, { headers }).pipe(
+      tap(data => console.log('Car models data/error:', data)),
+      catchError(this.handleError)
+    );
   }
   getCarData():Observable<any>{
 
@@ -69,10 +69,9 @@ export class CarServiceService {
       .set('model', model)
       .set('year', '2020')
   
-    const url = `${this.baseUrl}/api/engines?${params.toString()}`;
-    return this.http.get<any>(url, { headers })
-      .pipe(
-        tap(data => console.log('Engine specs data/error:', data)), // Check what the API returns
+      const url = `${this.baseUrl}/api/engines?${params.toString()}`;
+      return this.http.get<any>(url, { headers }).pipe(
+        tap(data => console.log('Engine specs data/error:', data.data)),
       );
   }
 }

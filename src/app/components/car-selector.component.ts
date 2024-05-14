@@ -39,7 +39,7 @@ export class CarSelectorComponent implements OnInit {
       },
       (error: HttpErrorResponse) => {
         console.error('Error fetching car makes:', error);
-        this.isLoadingMakes = false; //There was an error loading the data
+        this.isLoadingMakes = false;
       }
     );
   }
@@ -51,7 +51,7 @@ export class CarSelectorComponent implements OnInit {
     this.carService.getCarModels(make).subscribe(
       (res: any) => {
         if (res.data) {
-          this.carModels = res.data.map((model: any) => model.name); // Assuming the model property is 'name'
+          this.carModels = res.data.map((model: any) => model.name);
           console.log('Car models:', this.carModels); 
         } else {
           console.error('Car models data is missing or not in the expected format:', res);
@@ -65,20 +65,23 @@ export class CarSelectorComponent implements OnInit {
 
   onModelChange(model: string): void {
     this.selectedModel = model;
-
-    this.carService.getEngineSpecs(this.selectedMake, this.selectedModel).subscribe(
+    this.showEngineSpecs = false;
+  
+    if (this.selectedMake && this.selectedModel) {
+      this.carService.getEngineSpecs(this.selectedMake, this.selectedModel).subscribe(
         (res: any) => {
-            if (res.data) {
-                this.engineSpecs = res.data;
-                this.showEngineSpecs = true; // Show engine specs
-                console.log('Engine specs:', this.engineSpecs);
-            } else {
-                console.error('Car models data is undefined or null:', res);
-            }
+          if (res && Array.isArray(res.data)) {  //Check if 'data' is an array
+            this.engineSpecs = res.data;
+            this.showEngineSpecs = true;
+            console.log('Engine specs:', this.engineSpecs);
+          } else {
+            console.error('Unexpected engine specs data format:', res);
+          }
         },
         (error: HttpErrorResponse) => {
-            console.error('Error fetching car models:', error);
+          console.error('Error fetching engine specs:', error);
         }
-    );
-}
+      );
+    }
+  }
 }
