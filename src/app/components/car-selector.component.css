@@ -1,0 +1,36 @@
+/* General Navbar Styles */
+.navbar {
+    background-color: #f8f9fa !important; /* Light gray background */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern sans-serif font */
+}
+
+.navbar a { /* All links in the navbar */
+    color: #343a40;  /* Dark gray text */
+    text-decoration: none; /* Remove default underlines */
+}
+
+/* Brand/Logo */
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Dropdown Styling */
+.dropdown-menu {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: inherit; /* Inherit font from the navbar */
+}
+
+.dropdown-item {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem; /* Slightly smaller font for dropdown items */
+}
+
+.dropdown-item:hover {
+    background-color: #e2e6ea;
+    cursor: pointer; /* Indicate that it's clickable */
+}
