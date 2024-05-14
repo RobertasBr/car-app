@@ -1,34 +1,47 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Car App</a>
-  
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="makeDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Select Make
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="makeDropdown">
-                <ng-container *ngIf="carMakes && carMakes.length > 0">  
-                  <li *ngFor="let make of carMakes">
-                    <a class="dropdown-item" href="#" (click)="onMakeChange(make)">{{ make }}</a>
-                  </li>
-                </ng-container>
-                <li *ngIf="carMakes.length === 0">
-                  <span class="dropdown-item">Loading makes...</span> 
+        <a class="navbar-brand" href="#">Car App</a>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="makeDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Select Make
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="makeDropdown">
+                        <ng-container *ngIf="carMakes && carMakes.length > 0">
+                            <li *ngFor="let make of carMakes">
+                                <a class="dropdown-item" href="#" (click)="onMakeChange(make)">{{ make }}</a>
+                            </li>
+                        </ng-container>
+                        <li *ngIf="isLoadingMakes">
+                            <span class="dropdown-item">Loading makes...</span>
+                        </li>
+                    </ul>
                 </li>
-              </ul>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="modelDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Select Model
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="modelDropdown">
-              <li *ngFor="let model of carModels">
-                <a class="dropdown-item" href="#">{{ model }}</a>
-              </li>
+            <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="modelDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Select Model
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="modelDropdown" *ngIf="selectedMake">
+                        <li *ngFor="let model of carModels">
+                            <a class="dropdown-item" href="#">{{ model }}</a>
+                        </li>
+                    </ul>
+                </li>
             </ul>
-          </li>
-        </ul>
-      </div>
+            </ul>
+            <div *ngIf="showEngineSpecs">
+                <h3>Engine Specifications:</h3>
+                <ul>
+                  <li *ngFor="let spec of engineSpecs">
+                    {{ spec.name }}: {{ spec.value }}
+                  </li>
+                </ul>
+              </div>
+        </div>
     </div>
-  </nav>
+</nav>

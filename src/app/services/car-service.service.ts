@@ -23,15 +23,22 @@ export class CarServiceService {
     return this.http.get(`${this.baseUrl}/api/makes`, { headers });
   }
 
-getCarModels(make: string): Observable<any> {
-  const headers = {
-    'x-rapidapi-key': this.apiKey,
-    'x-rapidapi-host': 'car-api2.p.rapidapi.com',
-  };
-  const params = new HttpParams().set('make', make);
+  getCarModels(make: string): Observable<any> {
+    const headers = {
+      'x-rapidapi-key': this.apiKey,
+      'x-rapidapi-host': 'car-api2.p.rapidapi.com',
+    };
 
-  return this.http.get(`${this.baseUrl}/api/models`, { headers, params });
-}
+    const params = new HttpParams().set('make', make).set('year', '2020');
+  
+    const url = `${this.baseUrl}/api/models?${params.toString()}`;
+  
+    return this.http.get<any>(url, { headers })
+      .pipe(
+        tap(data => console.log('Car models data/error:', data)),
+        catchError(this.handleError)
+      );
+  }
   getCarData():Observable<any>{
 
     const headers = {
@@ -51,4 +58,23 @@ getCarModels(make: string): Observable<any> {
     console.log('CarApiService: ' + err.message);
     return err.message;
   }
+  getEngineSpecs(make: string, model: string): Observable<any> {
+    const headers = {
+      'X-RapidAPI-Key': this.apiKey,
+      'X-RapidAPI-Host': 'car-api2.p.rapidapi.com'
+    };
+  
+    const params = new HttpParams()
+      .set('make', make)
+      .set('model', model)
+      .set('year', '2020')
+  
+    const url = `${this.baseUrl}/api/engines?${params.toString()}`;
+    return this.http.get<any>(url, { headers })
+      .pipe(
+        tap(data => console.log('Engine specs data/error:', data)), // Check what the API returns
+      );
+  }
 }
+
+

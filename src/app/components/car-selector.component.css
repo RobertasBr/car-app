@@ -1,14 +1,14 @@
 /* General Navbar Styles */
 .navbar {
-    background-color: #f8f9fa !important; /* Light gray background */
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background-color: #f8f9fa !important;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     padding: 1rem;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern sans-serif font */
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.navbar a { /* All links in the navbar */
-    color: #343a40;  /* Dark gray text */
-    text-decoration: none; /* Remove default underlines */
+.navbar a {
+    color: #343a40;
+    text-decoration: none;
 }
 
 /* Brand/Logo */
@@ -22,15 +22,53 @@
     border: none;
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    font-family: inherit; /* Inherit font from the navbar */
+    font-family: inherit;
+    min-width: 150px;
+    padding: 0; /* Remove default padding */
+    width: auto;
 }
 
 .dropdown-item {
-    padding: 0.5rem 1rem;
-    font-size: 0.9rem; /* Slightly smaller font for dropdown items */
+    padding: 0.1rem 1rem;
+    font-size: 0.9rem;
+    color: #343a40;
 }
 
 .dropdown-item:hover {
     background-color: #e2e6ea;
-    cursor: pointer; /* Indicate that it's clickable */
+    cursor: pointer;
+}
+
+/* Grid Layout for Makes Dropdown */
+#makeDropdown .dropdown-menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Two columns on larger screens */
+    gap: 10px; 
+}
+
+/* Media Query for Smaller Screens (Optional) */
+@media (max-width: 768px) {
+    #makeDropdown .dropdown-menu {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+    }
+}
+
+/* List Styles */
+ul {
+  list-style: none;
+  padding-left: 0;
+  max-width: 500px;
+}
+
+li {
+  list-style: none;
+  text-decoration: none;
+  font-size: large;
+}
+a {
+    margin-bottom: 5px;
+}
+.navbar-nav {
+    display: flex; /* Enable flexbox for the navbar items */
+    justify-content: space-between; /* Distribute items evenly with space between */
 }
