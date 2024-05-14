@@ -1,13 +1,13 @@
-[debug] [2024-05-14T21:14:48.570Z] ----------------------------------------------------------------------
-[debug] [2024-05-14T21:14:48.572Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\iphone14\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting
-[debug] [2024-05-14T21:14:48.572Z] CLI Version:   13.5.1
-[debug] [2024-05-14T21:14:48.573Z] Platform:      win32
-[debug] [2024-05-14T21:14:48.573Z] Node Version:  v18.13.0
-[debug] [2024-05-14T21:14:48.574Z] Time:          Tue May 14 2024 22:14:48 GMT+0100 (British Summer Time)
-[debug] [2024-05-14T21:14:48.574Z] ----------------------------------------------------------------------
+[debug] [2024-05-14T21:34:23.090Z] ----------------------------------------------------------------------
+[debug] [2024-05-14T21:34:23.092Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\iphone14\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2024-05-14T21:34:23.092Z] CLI Version:   13.9.0
+[debug] [2024-05-14T21:34:23.093Z] Platform:      win32
+[debug] [2024-05-14T21:34:23.093Z] Node Version:  v18.13.0
+[debug] [2024-05-14T21:34:23.094Z] Time:          Tue May 14 2024 22:34:23 GMT+0100 (British Summer Time)
+[debug] [2024-05-14T21:34:23.094Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2024-05-14T21:14:48.640Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2024-05-14T21:14:48.640Z] > authorizing via signed-in user (r.brazinskas1@gmail.com)
+[debug] [2024-05-14T21:34:23.160Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-05-14T21:34:23.160Z] > authorizing via signed-in user (r.brazinskas1@gmail.com)
 [info] 
      ######## #### ########  ######## ########     ###     ######  ########
      ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
@@ -30,14 +30,131 @@ Before we get started, keep in mind:
 [info] You can create multiple project aliases by running firebase use --add, 
 [info] but for now we'll just set up a default project.
 [info] 
+[debug] [2024-05-14T21:34:24.387Z] Using project from CLI flag: carsales-ca3
+[debug] [2024-05-14T21:34:24.389Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/carsales-ca3 [none]
+[debug] [2024-05-14T21:34:24.632Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/carsales-ca3 200
+[debug] [2024-05-14T21:34:24.633Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/carsales-ca3 {"projectId":"carsales-ca3","projectNumber":"415861061682","displayName":"carsales-ca3","name":"projects/carsales-ca3","resources":{"hostingSite":"carsales-ca3"},"state":"ACTIVE","etag":"1_8c48ad0f-e7fc-49db-962d-c53998c150e7"}
+[info] i  Using project carsales-ca3 (carsales-ca3) 
+[info] 
+=== Hosting Setup
+[debug] [2024-05-14T21:34:24.637Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/carsales-ca3 [none]
+[debug] [2024-05-14T21:34:24.931Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/carsales-ca3 200
+[debug] [2024-05-14T21:34:24.931Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/carsales-ca3 {"projectId":"carsales-ca3","projectNumber":"415861061682","displayName":"carsales-ca3","name":"projects/carsales-ca3","resources":{"hostingSite":"carsales-ca3"},"state":"ACTIVE","etag":"1_8c48ad0f-e7fc-49db-962d-c53998c150e7"}
+[debug] [2024-05-14T21:35:12.129Z] ----------------------------------------------------------------------
+[debug] [2024-05-14T21:35:12.131Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\iphone14\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2024-05-14T21:35:12.131Z] CLI Version:   13.9.0
+[debug] [2024-05-14T21:35:12.131Z] Platform:      win32
+[debug] [2024-05-14T21:35:12.132Z] Node Version:  v18.13.0
+[debug] [2024-05-14T21:35:12.133Z] Time:          Tue May 14 2024 22:35:12 GMT+0100 (British Summer Time)
+[debug] [2024-05-14T21:35:12.133Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-05-14T21:35:12.196Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-05-14T21:35:12.197Z] > authorizing via signed-in user (r.brazinskas1@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\iphone14\Documents\FinalCAWeb\car-app
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2024-05-14T21:35:13.788Z] Using project from CLI flag: carsales-ca3
+[debug] [2024-05-14T21:35:13.790Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/carsales-ca3 [none]
+[debug] [2024-05-14T21:35:14.028Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/carsales-ca3 200
+[debug] [2024-05-14T21:35:14.028Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/carsales-ca3 {"projectId":"carsales-ca3","projectNumber":"415861061682","displayName":"carsales-ca3","name":"projects/carsales-ca3","resources":{"hostingSite":"carsales-ca3"},"state":"ACTIVE","etag":"1_8c48ad0f-e7fc-49db-962d-c53998c150e7"}
+[info] i  Using project carsales-ca3 (carsales-ca3) 
+[info] 
+=== Hosting Setup
+[debug] [2024-05-14T21:35:14.033Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/carsales-ca3 [none]
+[debug] [2024-05-14T21:35:14.329Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/carsales-ca3 200
+[debug] [2024-05-14T21:35:14.329Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/carsales-ca3 {"projectId":"carsales-ca3","projectNumber":"415861061682","displayName":"carsales-ca3","name":"projects/carsales-ca3","resources":{"hostingSite":"carsales-ca3"},"state":"ACTIVE","etag":"1_8c48ad0f-e7fc-49db-962d-c53998c150e7"}
+[debug] [2024-05-14T21:35:40.994Z] ----------------------------------------------------------------------
+[debug] [2024-05-14T21:35:40.996Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\iphone14\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2024-05-14T21:35:40.997Z] CLI Version:   13.9.0
+[debug] [2024-05-14T21:35:40.997Z] Platform:      win32
+[debug] [2024-05-14T21:35:40.997Z] Node Version:  v18.13.0
+[debug] [2024-05-14T21:35:40.998Z] Time:          Tue May 14 2024 22:35:40 GMT+0100 (British Summer Time)
+[debug] [2024-05-14T21:35:40.998Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-05-14T21:35:41.006Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-05-14T21:35:41.006Z] > authorizing via signed-in user (r.brazinskas1@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\iphone14\Documents\FinalCAWeb\car-app
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2024-05-14T21:35:46.599Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2024-05-14T21:35:47.048Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2024-05-14T21:35:47.048Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project carenginelookup (carEngineLookup) 
+[info] 
+=== Hosting Setup
+[debug] [2024-05-14T21:35:48.346Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/carenginelookup [none]
+[debug] [2024-05-14T21:35:48.650Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/carenginelookup 200
+[debug] [2024-05-14T21:35:48.651Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/carenginelookup {"projectId":"carenginelookup","projectNumber":"157315191715","displayName":"carEngineLookup","name":"projects/carenginelookup","resources":{"hostingSite":"carenginelookup"},"state":"ACTIVE","etag":"1_26a3d744-de22-4562-a1a4-78efdd0a9873"}
+[debug] [2024-05-14T21:36:05.394Z] ----------------------------------------------------------------------
+[debug] [2024-05-14T21:36:05.395Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\iphone14\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2024-05-14T21:36:05.396Z] CLI Version:   13.9.0
+[debug] [2024-05-14T21:36:05.396Z] Platform:      win32
+[debug] [2024-05-14T21:36:05.396Z] Node Version:  v18.13.0
+[debug] [2024-05-14T21:36:05.397Z] Time:          Tue May 14 2024 22:36:05 GMT+0100 (British Summer Time)
+[debug] [2024-05-14T21:36:05.397Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-05-14T21:36:05.405Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-05-14T21:36:05.405Z] > authorizing via signed-in user (r.brazinskas1@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\iphone14\Documents\FinalCAWeb\car-app
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
 [info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
-[debug] [2024-05-14T21:15:06.473Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
-[debug] [2024-05-14T21:15:06.473Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"CarEngineLookup","name":"CarEngineLookup"}
-[debug] [2024-05-14T21:15:06.680Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 400
-[debug] [2024-05-14T21:15:06.680Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"error":{"code":400,"message":"field [project_id] has issue [project_id contains invalid characters]","status":"INVALID_ARGUMENT","details":[{"@type":"type.googleapis.com/google.rpc.BadRequest","fieldViolations":[{"field":"project_id","description":"project_id contains invalid characters"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"url":"https://cloud.google.com/resource-manager/reference/rest/v1/projects"}]}]}}
-[debug] [2024-05-14T21:15:06.728Z] FirebaseError: HTTP Error: 400, field [project_id] has issue [project_id contains invalid characters]
+[debug] [2024-05-14T21:36:20.755Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2024-05-14T21:36:20.755Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"carEngineLook","name":"carEngineLook"}
+[debug] [2024-05-14T21:36:20.949Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 400
+[debug] [2024-05-14T21:36:20.949Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"error":{"code":400,"message":"field [project_id] has issue [project_id contains invalid characters]","status":"INVALID_ARGUMENT","details":[{"@type":"type.googleapis.com/google.rpc.BadRequest","fieldViolations":[{"field":"project_id","description":"project_id contains invalid characters"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"url":"https://cloud.google.com/resource-manager/reference/rest/v1/projects"}]}]}}
+[debug] [2024-05-14T21:36:20.988Z] FirebaseError: HTTP Error: 400, field [project_id] has issue [project_id contains invalid characters]
     at responseToError (C:\Users\iphone14\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:49:12)
-    at RetryOperation._fn (C:\Users\iphone14\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:297:77)
+    at RetryOperation._fn (C:\Users\iphone14\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:305:77)
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
 [error] 
 [error] Error: Failed to create project. See firebase-debug.log for more info.
